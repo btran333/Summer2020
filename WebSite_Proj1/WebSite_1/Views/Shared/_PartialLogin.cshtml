@@ -1,0 +1,60 @@
+﻿@*@if (Session["Email"] != null)
+    {
+        <li>@Html.ActionLink("Hello " + Session["Email"], "")</li>
+        <li>
+            <a asp-action="manage" title="Manage">Hello @Session["Email"]</a>
+        </li>
+        <li>@Html.ActionLink("Log Out", "LogOut")</li>
+    }
+    else
+    {
+        <li>@Html.ActionLink("Register", "Register")</li>
+        <li>@Html.ActionLink("Log in", "Login")</li>
+    }*@
+
+
+
+@using WebSite_1.Models
+
+@if (Session["User"] != null)
+{
+    var user = (WebSite_1.Models.UserModel)Session["User"];
+
+    using (Html.BeginForm("LogOff", "Home", FormMethod.Post, new
+    {
+        id = "logoutForm",
+        @class = "navbar-right"
+    }))
+    {
+        @Html.AntiForgeryToken()
+
+        <ul class="nav navbar-nav navbar-right">
+            @*<li>
+                @Html.ActionLink("Hello " + user.Name + "!", "Index", "Manage",
+                                routeValues: null,
+                                htmlAttributes: new { title = "Manage" })
+            </li>*@
+            <li>
+                <a>Hello @user.Name!</a>
+            </li>
+            <li>
+                <a href="javascript:document.getElementById('logoutForm').submit()">
+                    Log off
+                </a>
+            </li>
+        </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            @Html.ActionLink("Register", "Register", "Home", routeValues: null,
+                                    htmlAttributes: new { id = "registerLink" })
+    </li>
+    <li>
+        @Html.ActionLink("Log in", "Login", "Home", routeValues: null,
+                                htmlAttributes: new { id = "loginLink" })
+</li>
+</ul>
+}

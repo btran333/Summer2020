@@ -1,0 +1,44 @@
+﻿@model WebSite_1.ClassModel[]
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        .tab {
+            display: inline-block;
+            margin-right: 80px;
+        }
+    </style>
+</head>
+<body>
+    @*@Model.Name - @Model.Description  -  @Model.Price*@
+
+    @if (Model.Length > 0)
+    {
+    <table class="table">
+        <td><b>Class <span class="tab"></span></b></td>
+        <td><b>Description <span class="tab"></span></b></td>
+        @*<td><b>Price</b></td>*@
+        <td><b>Add Class</b></td>
+
+        @foreach (var aClass in Model)
+        {
+    <tr>
+        <td>@aClass.Name <span class="tab"></span> </td>
+        <td>@String.Format("{0:c}", aClass.Price) <span class="tab"></span></td>
+        <td>@Html.ActionLink("Add Class", "StudentClasses", new { id=aClass.Id})</td>
+    </tr>
+        }
+    </table>
+    }
+    else
+    {
+        <h2>No class found.</h2>
+    }
+</body>
+</html>
