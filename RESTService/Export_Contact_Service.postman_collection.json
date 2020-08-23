@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "5802bbd7-01d7-4c88-9786-3696dcb28fc4",
+		"name": "_Contact_Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"modify\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ContactService}}/api/users/",
+					"protocol": "http",
+					"host": [
+						"{{ContactService}}"
+					],
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"modify\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ContactService}}/api/users/",
+					"protocol": "http",
+					"host": [
+						"{{ContactService}}"
+					],
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Specific",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"modify\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ContactService}}/api/users/18d55b4c-6813-496a-87e2-fbea10506fe6",
+					"protocol": "http",
+					"host": [
+						"{{ContactService}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"18d55b4c-6813-496a-87e2-fbea10506fe6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Specific",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"modify\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ContactService}}/api/users/18d55b4c-6813-496a-87e2-fbea10506fe6",
+					"protocol": "http",
+					"host": [
+						"{{ContactService}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"18d55b4c-6813-496a-87e2-fbea10506fe6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Specific",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"modify\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ContactService}}/api/users/0b475a27-9bc4-4efa-a9a9-0cc5da629168",
+					"protocol": "http",
+					"host": [
+						"{{ContactService}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"0b475a27-9bc4-4efa-a9a9-0cc5da629168"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
